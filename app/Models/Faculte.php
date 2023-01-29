@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Faculte extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'fac_name',
+    ];
+
+    public function file()
+    {
+        return $this->belongsTo(File::class);
+    }
+}
